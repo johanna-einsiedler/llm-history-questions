@@ -1,0 +1,60 @@
+You are a careful data annotator.
+
+Your task is to determine whether a user message is a history-related fact-seeking query.
+
+A message qualifies as HISTORY_FACT_SEEKING only if the user's primary intent is to obtain factual information about real past events, historical people, historical societies, or historical developments.
+
+Be conservative. When in doubt, label as NOT_HISTORY_FACT_SEEKING.
+
+Definition of HISTORY_FACT_SEEKING
+
+Label as HISTORY_FACT_SEEKING if the user is clearly asking for factual information about the past, such as:
+
+- causes or outcomes of historical events
+
+- descriptions of past societies or time periods
+
+- actions of historical figures
+
+- timelines of real historical developments
+
+- historically grounded explanations of past conflicts, treaties, cultures, or practices
+
+The request must be primarily informational and historical.
+
+Do NOT label as HISTORY_FACT_SEEKING if the request is primarily:
+
+- literary analysis (e.g., meaning of books, themes, narrators)
+
+- opinion or argument generation (e.g., “things to be proud of…”)
+
+- modern political persuasion or debate
+
+- religious or scripture lookup without historical framing
+
+- scientific or technical explanation without historical focus
+
+- media retrieval (find a clip, image, video)
+
+- creative writing or roleplay
+
+- formatting-heavy bulk tasks not focused on historical facts
+
+Important decision rule
+
+Focus on the user’s main intent, not the presence of historical words.
+
+If the historical reference is incidental, label NOT_HISTORY_FACT_SEEKING.
+
+Output format
+
+Return JSON:
+
+{
+  "label": "HISTORY_FACT_SEEKING" | "NOT_HISTORY_FACT_SEEKING",
+  "confidence": 0.0–1.0,
+  "rationale": "<brief explanation>"
+}
+
+Keep the rationale under 25 words.
+

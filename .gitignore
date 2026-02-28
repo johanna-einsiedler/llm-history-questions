@@ -1,0 +1,16 @@
+.env
+
+# Large data folders
+data/lmsys-chat-1m/
+
+# WildChat data (keep labelled_data and epistemic_diversity)
+data/wildchat_data/clustered_data/
+data/wildchat_data/embeddings/
+data/wildchat_data/english_data/
+data/wildchat_data/fact_counted/
+data/wildchat_data/filtered_data/
+data/wildchat_data/keyword_filtered/
+data/wildchat_data/nli_clustered/
+data/wildchat_data/raw_data/
+data/wildchat_data/wiki_cache/
+data/wildchat_data/labelled_data/
